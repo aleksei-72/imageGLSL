@@ -1,0 +1,241 @@
+EXPORTS
+    _Z10TiXmlFOpenPKcS0_ @1
+    _ZN11TiXmlString4nposE @2 DATA
+    _ZN11TiXmlString6appendEPKcj @3
+    _ZN11TiXmlString6assignEPKcj @4
+    _ZN11TiXmlString7reserveEj @5
+    _ZN11TiXmlString8nullrep_E @6 DATA
+    _ZN12TiXmlComment5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @7
+    _ZN12TiXmlComment9ToCommentEv @8
+    _ZN12TiXmlCommentC1ERKS_ @9
+    _ZN12TiXmlCommentC2ERKS_ @10
+    _ZN12TiXmlCommentD0Ev @11
+    _ZN12TiXmlCommentD1Ev @12
+    _ZN12TiXmlCommentaSERKS_ @13
+    _ZN12TiXmlElement12SetAttributeEPKcS1_ @14
+    _ZN12TiXmlElement12SetAttributeEPKci @15
+    _ZN12TiXmlElement15RemoveAttributeEPKc @16
+    _ZN12TiXmlElement18SetDoubleAttributeEPKcd @17
+    _ZN12TiXmlElement5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @18
+    _ZN12TiXmlElement9ClearThisEv @19
+    _ZN12TiXmlElement9ReadValueEPKcP16TiXmlParsingData13TiXmlEncoding @20
+    _ZN12TiXmlElement9ToElementEv @21
+    _ZN12TiXmlElementC1EPKc @22
+    _ZN12TiXmlElementC1ERKS_ @23
+    _ZN12TiXmlElementC2EPKc @24
+    _ZN12TiXmlElementC2ERKS_ @25
+    _ZN12TiXmlElementD0Ev @26
+    _ZN12TiXmlElementD1Ev @27
+    _ZN12TiXmlElementD2Ev @28
+    _ZN12TiXmlElementaSERKS_ @29
+    _ZN12TiXmlPrinter10VisitEnterERK12TiXmlElementPK14TiXmlAttribute @30
+    _ZN12TiXmlPrinter10VisitEnterERK13TiXmlDocument @31
+    _ZN12TiXmlPrinter5VisitERK12TiXmlComment @32
+    _ZN12TiXmlPrinter5VisitERK12TiXmlUnknown @33
+    _ZN12TiXmlPrinter5VisitERK16TiXmlDeclaration @34
+    _ZN12TiXmlPrinter5VisitERK9TiXmlText @35
+    _ZN12TiXmlPrinter9VisitExitERK12TiXmlElement @36
+    _ZN12TiXmlPrinter9VisitExitERK13TiXmlDocument @37
+    _ZN12TiXmlPrinterD0Ev @38
+    _ZN12TiXmlPrinterD1Ev @39
+    _ZN12TiXmlUnknown5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @40
+    _ZN12TiXmlUnknown9ToUnknownEv @41
+    _ZN12TiXmlUnknownD0Ev @42
+    _ZN12TiXmlUnknownD1Ev @43
+    _ZN12TiXmlVisitor10VisitEnterERK12TiXmlElementPK14TiXmlAttribute @44
+    _ZN12TiXmlVisitor10VisitEnterERK13TiXmlDocument @45
+    _ZN12TiXmlVisitor5VisitERK12TiXmlComment @46
+    _ZN12TiXmlVisitor5VisitERK12TiXmlUnknown @47
+    _ZN12TiXmlVisitor5VisitERK16TiXmlDeclaration @48
+    _ZN12TiXmlVisitor5VisitERK9TiXmlText @49
+    _ZN12TiXmlVisitor9VisitExitERK12TiXmlElement @50
+    _ZN12TiXmlVisitor9VisitExitERK13TiXmlDocument @51
+    _ZN12TiXmlVisitorD0Ev @52
+    _ZN12TiXmlVisitorD1Ev @53
+    _ZN13TiXmlDocument10ToDocumentEv @54
+    _ZN13TiXmlDocument5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @55
+    _ZN13TiXmlDocument8LoadFileE13TiXmlEncoding @56
+    _ZN13TiXmlDocument8LoadFileEP6_iobuf13TiXmlEncoding @57
+    _ZN13TiXmlDocument8LoadFileEPKc13TiXmlEncoding @58
+    _ZN13TiXmlDocument8SetErrorEiPKcP16TiXmlParsingData13TiXmlEncoding @59
+    _ZN13TiXmlDocumentC1EPKc @60
+    _ZN13TiXmlDocumentC1ERKS_ @61
+    _ZN13TiXmlDocumentC1Ev @62
+    _ZN13TiXmlDocumentC2EPKc @63
+    _ZN13TiXmlDocumentC2ERKS_ @64
+    _ZN13TiXmlDocumentC2Ev @65
+    _ZN13TiXmlDocumentD0Ev @66
+    _ZN13TiXmlDocumentD1Ev @67
+    _ZN13TiXmlDocumentaSERKS_ @68
+    _ZN14TiXmlAttribute11SetIntValueEi @69
+    _ZN14TiXmlAttribute14SetDoubleValueEd @70
+    _ZN14TiXmlAttribute5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @71
+    _ZN14TiXmlAttributeD0Ev @72
+    _ZN14TiXmlAttributeD1Ev @73
+    _ZN16TiXmlDeclaration13ToDeclarationEv @74
+    _ZN16TiXmlDeclaration5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @75
+    _ZN16TiXmlDeclarationC1EPKcS1_S1_ @76
+    _ZN16TiXmlDeclarationC1ERKS_ @77
+    _ZN16TiXmlDeclarationC2EPKcS1_S1_ @78
+    _ZN16TiXmlDeclarationC2ERKS_ @79
+    _ZN16TiXmlDeclarationD0Ev @80
+    _ZN16TiXmlDeclarationD1Ev @81
+    _ZN16TiXmlDeclarationaSERKS_ @82
+    _ZN16TiXmlParsingData5StampEPKc13TiXmlEncoding @83
+    _ZN17TiXmlAttributeSet12FindOrCreateEPKc @84
+    _ZN17TiXmlAttributeSet3AddEP14TiXmlAttribute @85
+    _ZN17TiXmlAttributeSet6RemoveEP14TiXmlAttribute @86
+    _ZN17TiXmlAttributeSetC1Ev @87
+    _ZN17TiXmlAttributeSetC2Ev @88
+    _ZN17TiXmlAttributeSetD1Ev @89
+    _ZN17TiXmlAttributeSetD2Ev @90
+    _ZN9TiXmlBase10IsAlphaNumEh13TiXmlEncoding @91
+    _ZN9TiXmlBase11StringEqualEPKcS1_b13TiXmlEncoding @92
+    _ZN9TiXmlBase11errorStringE @93 DATA
+    _ZN9TiXmlBase12EncodeStringERK11TiXmlStringPS0_ @94
+    _ZN9TiXmlBase13utf8ByteTableE @95 DATA
+    _ZN9TiXmlBase14SkipWhiteSpaceEPKc13TiXmlEncoding @96
+    _ZN9TiXmlBase18ConvertUTF32ToUTF8EmPcPi @97
+    _ZN9TiXmlBase18condenseWhiteSpaceE @98 DATA
+    _ZN9TiXmlBase6entityE @99 DATA
+    _ZN9TiXmlBase7IsAlphaEh13TiXmlEncoding @100
+    _ZN9TiXmlBase8ReadNameEPKcP11TiXmlString13TiXmlEncoding @101
+    _ZN9TiXmlBase8ReadTextEPKcP11TiXmlStringbS1_b13TiXmlEncoding @102
+    _ZN9TiXmlBase9GetEntityEPKcPcPi13TiXmlEncoding @103
+    _ZN9TiXmlNode10ToDocumentEv @104
+    _ZN9TiXmlNode11RemoveChildEPS_ @105
+    _ZN9TiXmlNode12LinkEndChildEPS_ @106
+    _ZN9TiXmlNode12ReplaceChildEPS_RKS_ @107
+    _ZN9TiXmlNode13ToDeclarationEv @108
+    _ZN9TiXmlNode14InsertEndChildERKS_ @109
+    _ZN9TiXmlNode16InsertAfterChildEPS_RKS_ @110
+    _ZN9TiXmlNode17InsertBeforeChildEPS_RKS_ @111
+    _ZN9TiXmlNode5ClearEv @112
+    _ZN9TiXmlNode6ToTextEv @113
+    _ZN9TiXmlNode8IdentifyEPKc13TiXmlEncoding @114
+    _ZN9TiXmlNode9ToCommentEv @115
+    _ZN9TiXmlNode9ToElementEv @116
+    _ZN9TiXmlNode9ToUnknownEv @117
+    _ZN9TiXmlNodeC1ENS_8NodeTypeE @118
+    _ZN9TiXmlNodeC2ENS_8NodeTypeE @119
+    _ZN9TiXmlNodeD0Ev @120
+    _ZN9TiXmlNodeD1Ev @121
+    _ZN9TiXmlNodeD2Ev @122
+    _ZN9TiXmlText5ParseEPKcP16TiXmlParsingData13TiXmlEncoding @123
+    _ZN9TiXmlText6ToTextEv @124
+    _ZN9TiXmlTextD0Ev @125
+    _ZN9TiXmlTextD1Ev @126
+    _ZNK11TiXmlHandle10FirstChildEPKc @127
+    _ZNK11TiXmlHandle10FirstChildEv @128
+    _ZNK11TiXmlHandle12ChildElementEPKci @129
+    _ZNK11TiXmlHandle12ChildElementEi @130
+    _ZNK11TiXmlHandle17FirstChildElementEPKc @131
+    _ZNK11TiXmlHandle17FirstChildElementEv @132
+    _ZNK11TiXmlHandle5ChildEPKci @133
+    _ZNK11TiXmlHandle5ChildEi @134
+    _ZNK12TiXmlComment5CloneEv @135
+    _ZNK12TiXmlComment5PrintEP6_iobufi @136
+    _ZNK12TiXmlComment6AcceptEP12TiXmlVisitor @137
+    _ZNK12TiXmlComment6CopyToEPS_ @138
+    _ZNK12TiXmlComment9ToCommentEv @139
+    _ZNK12TiXmlElement17QueryIntAttributeEPKcPi @140
+    _ZNK12TiXmlElement18QueryBoolAttributeEPKcPb @141
+    _ZNK12TiXmlElement20QueryDoubleAttributeEPKcPd @142
+    _ZNK12TiXmlElement22QueryUnsignedAttributeEPKcPj @143
+    _ZNK12TiXmlElement5CloneEv @144
+    _ZNK12TiXmlElement5PrintEP6_iobufi @145
+    _ZNK12TiXmlElement6AcceptEP12TiXmlVisitor @146
+    _ZNK12TiXmlElement6CopyToEPS_ @147
+    _ZNK12TiXmlElement7GetTextEv @148
+    _ZNK12TiXmlElement9AttributeEPKc @149
+    _ZNK12TiXmlElement9AttributeEPKcPd @150
+    _ZNK12TiXmlElement9AttributeEPKcPi @151
+    _ZNK12TiXmlElement9ToElementEv @152
+    _ZNK12TiXmlUnknown5CloneEv @153
+    _ZNK12TiXmlUnknown5PrintEP6_iobufi @154
+    _ZNK12TiXmlUnknown6AcceptEP12TiXmlVisitor @155
+    _ZNK12TiXmlUnknown6CopyToEPS_ @156
+    _ZNK12TiXmlUnknown9ToUnknownEv @157
+    _ZNK13TiXmlDocument10ToDocumentEv @158
+    _ZNK13TiXmlDocument5CloneEv @159
+    _ZNK13TiXmlDocument5PrintEP6_iobufi @160
+    _ZNK13TiXmlDocument6AcceptEP12TiXmlVisitor @161
+    _ZNK13TiXmlDocument6CopyToEPS_ @162
+    _ZNK13TiXmlDocument8SaveFileEP6_iobuf @163
+    _ZNK13TiXmlDocument8SaveFileEPKc @164
+    _ZNK13TiXmlDocument8SaveFileEv @165
+    _ZNK14TiXmlAttribute11DoubleValueEv @166
+    _ZNK14TiXmlAttribute13QueryIntValueEPi @167
+    _ZNK14TiXmlAttribute16QueryDoubleValueEPd @168
+    _ZNK14TiXmlAttribute4NextEv @169
+    _ZNK14TiXmlAttribute5PrintEP6_iobufi @170
+    _ZNK14TiXmlAttribute5PrintEP6_iobufiP11TiXmlString @171
+    _ZNK14TiXmlAttribute8IntValueEv @172
+    _ZNK14TiXmlAttribute8PreviousEv @173
+    _ZNK16TiXmlDeclaration13ToDeclarationEv @174
+    _ZNK16TiXmlDeclaration5CloneEv @175
+    _ZNK16TiXmlDeclaration5PrintEP6_iobufi @176
+    _ZNK16TiXmlDeclaration5PrintEP6_iobufiP11TiXmlString @177
+    _ZNK16TiXmlDeclaration6AcceptEP12TiXmlVisitor @178
+    _ZNK16TiXmlDeclaration6CopyToEPS_ @179
+    _ZNK17TiXmlAttributeSet4FindEPKc @180
+    _ZNK9TiXmlNode10FirstChildEPKc @181
+    _ZNK9TiXmlNode10ToDocumentEv @182
+    _ZNK9TiXmlNode11GetDocumentEv @183
+    _ZNK9TiXmlNode11NextSiblingEPKc @184
+    _ZNK9TiXmlNode13ToDeclarationEv @185
+    _ZNK9TiXmlNode15IterateChildrenEPKS_ @186
+    _ZNK9TiXmlNode15IterateChildrenEPKcPKS_ @187
+    _ZNK9TiXmlNode15PreviousSiblingEPKc @188
+    _ZNK9TiXmlNode17FirstChildElementEPKc @189
+    _ZNK9TiXmlNode17FirstChildElementEv @190
+    _ZNK9TiXmlNode18NextSiblingElementEPKc @191
+    _ZNK9TiXmlNode18NextSiblingElementEv @192
+    _ZNK9TiXmlNode6CopyToEPS_ @193
+    _ZNK9TiXmlNode6ToTextEv @194
+    _ZNK9TiXmlNode9LastChildEPKc @195
+    _ZNK9TiXmlNode9ToCommentEv @196
+    _ZNK9TiXmlNode9ToElementEv @197
+    _ZNK9TiXmlNode9ToUnknownEv @198
+    _ZNK9TiXmlText5BlankEv @199
+    _ZNK9TiXmlText5CloneEv @200
+    _ZNK9TiXmlText5PrintEP6_iobufi @201
+    _ZNK9TiXmlText6AcceptEP12TiXmlVisitor @202
+    _ZNK9TiXmlText6CopyToEPS_ @203
+    _ZNK9TiXmlText6ToTextEv @204
+    _ZTI12TiXmlComment @205 DATA
+    _ZTI12TiXmlElement @206 DATA
+    _ZTI12TiXmlPrinter @207 DATA
+    _ZTI12TiXmlUnknown @208 DATA
+    _ZTI12TiXmlVisitor @209 DATA
+    _ZTI13TiXmlDocument @210 DATA
+    _ZTI14TiXmlAttribute @211 DATA
+    _ZTI16TiXmlDeclaration @212 DATA
+    _ZTI9TiXmlBase @213 DATA
+    _ZTI9TiXmlNode @214 DATA
+    _ZTI9TiXmlText @215 DATA
+    _ZTS12TiXmlComment @216 DATA
+    _ZTS12TiXmlElement @217 DATA
+    _ZTS12TiXmlPrinter @218 DATA
+    _ZTS12TiXmlUnknown @219 DATA
+    _ZTS12TiXmlVisitor @220 DATA
+    _ZTS13TiXmlDocument @221 DATA
+    _ZTS14TiXmlAttribute @222 DATA
+    _ZTS16TiXmlDeclaration @223 DATA
+    _ZTS9TiXmlBase @224 DATA
+    _ZTS9TiXmlNode @225 DATA
+    _ZTS9TiXmlText @226 DATA
+    _ZTV12TiXmlComment @227 DATA
+    _ZTV12TiXmlElement @228 DATA
+    _ZTV12TiXmlPrinter @229 DATA
+    _ZTV12TiXmlUnknown @230 DATA
+    _ZTV13TiXmlDocument @231 DATA
+    _ZTV14TiXmlAttribute @232 DATA
+    _ZTV16TiXmlDeclaration @233 DATA
+    _ZTV9TiXmlNode @234 DATA
+    _ZTV9TiXmlText @235 DATA
+    _ZplPKcRK11TiXmlString @236
+    _ZplRK11TiXmlStringPKc @237
+    _ZplRK11TiXmlStringS1_ @238
+    _get_output_format @239
+    fprintf @240

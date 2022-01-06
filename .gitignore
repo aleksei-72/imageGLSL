@@ -1,0 +1,7 @@
+res/*
+result/*
+file.log
+bin/Debug/*
+obj/*
+image_conventer.layout
+image_conventer.depend
