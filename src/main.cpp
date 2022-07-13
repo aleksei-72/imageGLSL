@@ -9,16 +9,84 @@
 #include <src/gl/pixelBufferToTGA.h>
 #include <src/timer/timer.h>
 #include <glm/vec2.hpp>
+#include <vector>
+#include <array>
 
 using namespace std;
+
+struct Parameters
+{
+    bool manyOutputFiles = false;
+    std::vector<string> textureNames;
+    string outputFileTemplate = "result/result%w%_%h%.tga";
+};
+
+Parameters getParameters(int argc, char* argv[])
+{
+    Parameters param;
+
+    const int ARG_SOURCE_FILES = 1;
+    const int ARG_OUTPUT_FILE  = 2;
+
+    int mode = 0;
+
+    for(int i = 1; i < argc; i++)
+    {
+        string arg = string(argv[i]);
+
+        if (arg[0] == '-')
+        {
+            if (arg == "-s")
+            {
+                mode = ARG_SOURCE_FILES;
+                continue;
+            }
+
+            if (arg == "-o")
+            {
+                mode = ARG_OUTPUT_FILE;
+                continue;
+            }
+
+            if (arg == "-m")
+            {
+                param.manyOutputFiles = true;
+                continue;
+            }
+
+            logger.warn("undefined argument " + arg);
+            continue;
+        }
+
+        if (!mode)
+        {
+            logger.warn("ignore parameter " + arg);
+            continue;
+        }
+
+        if (mode == ARG_SOURCE_FILES)
+        {
+            param.textureNames.push_back(arg);
+        }
+
+        if (mode == ARG_OUTPUT_FILE)
+        {
+            param.outputFileTemplate = arg;
+        }
+    }
+
+    return param;
+}
 
 int main(int argc, char* argv[])
 {
     Timer t;
+    Parameters params = getParameters(argc, argv);
 
-    int textureCount = 2;
-    string textureFileNames[textureCount] = {"res/file1.jpg", "res/file2.jpg"};
-
+    if (!params.textureNames.size())
+    {
+        logger.error("no input textures");
+    }
 
     if (glfwInit() == GL_FALSE)
     {
@@ -51,16 +119,19 @@ int main(int argc, char* argv[])
 
     logger.info("init OpenGL", to_string(t.getElapsedTime()) + " ms");
 
+
+    int textureCount = params.textureNames.size();
+
     Texture* texture = new Texture[textureCount];
 
     for (int i = 0; i < textureCount; i++)
     {
-        texture[i] = loadTexture(textureFileNames[i]);
-        logger.info("Read file '" + textureFileNames[i] + '\'', to_string(t.getElapsedTime()) + " ms");
+        texture[i] = loadTexture(params.textureNames[i]);
+        logger.info("Read file '" + params.textureNames[i] + '\'', to_string(t.getElapsedTime()) + " ms");
     }
 
     int resolutionsCount = 11,
-        resolutionWidths[resolutionsCount] = {16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384};
+        resolutionWidths[resolutionsCount] = {16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16};
 
 
     int maxTextureSize;
@@ -73,7 +144,7 @@ int main(int argc, char* argv[])
 
         if ((resolution.x > maxTextureSize || resolution.y > maxTextureSize) ||
             texture[0].w < resolution.x)
-            break;
+            continue;
 
 
         unsigned int offscreenBuffer;
@@ -134,17 +205,32 @@ int main(int argc, char* argv[])
 
         glFinish();
 
-        string resolutionStr = to_string(resolution.x) + "x" + to_string(resolution.y),
-               fname = "result/file_" + resolutionStr + ".tga";
+        string outputFileName = params.outputFileTemplate;
 
-        logger.info("Render " + resolutionStr, to_string(t.getElapsedTime()) + " ms");
+        std::array<pair<string, string>, 2> replaces = {
+            std::pair<string, string>("{w}", to_string(resolution.x)),
+            std::pair<string, string>("{h}", to_string(resolution.y))
+        };
+
+        for (pair<string, string> i : replaces)
+        {
+            int pos = outputFileName.find(i.first);
+            if (pos != std::string::npos)
+            {
+                outputFileName = outputFileName.replace(pos, i.first.length(), i.second);
+            }
+        }
+
+        outputFileName += ".tga";
+
+        logger.info("Render " + outputFileName, to_string(t.getElapsedTime()) + " ms");
 
         PixelBuffer buffer = getPixelBuffer(resolution.x, resolution.y);
-        pixelBufferToTGA(buffer, fname);
+        pixelBufferToTGA(buffer, outputFileName);
 
         buffer.clear();
 
-        logger.info("Write file '" + fname + '\'', to_string(t.getElapsedTime()) + " ms");
+        logger.info("Write file '" + outputFileName + '\'', to_string(t.getElapsedTime()) + " ms");
 
         glBindVertexArray(0);
         glBindTexture(GL_TEXTURE_2D,0);
@@ -152,6 +238,11 @@ int main(int argc, char* argv[])
         glDeleteFramebuffers(1, &offscreenBuffer);
         glDeleteTextures(1, &offscreenTexture);
         glDeleteRenderbuffers(1, &rbo);
+
+        if (!params.manyOutputFiles)
+        {
+            break;
+        }
     }
 
     glfwDestroyWindow(window);

@@ -13,6 +13,7 @@ public:
     Logger();
     ~Logger();
     void error(string msg, string description = "");
+    void warn(string msg, string description = "");
     void info(string msg, string description = "");
 
 private:

@@ -21,6 +21,13 @@ void Logger::error(string msg, string description)
     stream << s;
 }
 
+void Logger::warn(string msg, string description)
+{
+    string s = getLogMessage("warning", msg, description, __FILE__, __LINE__);
+    cout << s;
+    stream << s;
+}
+
 void Logger::info(string msg, string description)
 {
     string s = getLogMessage("info", msg, description, __FILE__, __LINE__);
